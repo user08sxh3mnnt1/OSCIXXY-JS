@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas Drawing</title>
+    <title>OSCIXXY-JS</title>
     <style>
         body {
             display: flex;
@@ -15,6 +15,21 @@
             flex-direction: column;
             /* Stacking elements vertically */
             font-family: Arial, sans-serif;
+        }
+
+        #header {
+            text-align: center;
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+
+        #siteName {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #username {
+            font-size: 18px;
         }
 
         #canvasContainer {
@@ -54,6 +69,11 @@
 </head>
 
 <body>
+    <div id="header">
+        <div id="siteName">OSCIXXY-JS</div>
+        <div id="username">bluepenguins</div>
+    </div>
+
     <label for="imageInput">Tracing Image:</label>
     <input type="file" id="imageInput" accept="image/*">
     <br>
