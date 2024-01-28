@@ -50,6 +50,7 @@
             top: 0;
             left: 0;
             pointer-events: none;
+            z-index: -1; /* Set the tracing canvas to be behind the main canvas */
         }
 
         button {
@@ -168,6 +169,17 @@
                 tracingCtx.globalAlpha = 0.5;
                 tracingCtx.drawImage(tracingImage, 0, 0, tracingCanvas.width, tracingCanvas.height);
                 tracingCtx.globalAlpha = 1;
+            }
+
+            // Redraw the lines on top of the tracing image
+            if (isDrawing && xData.length > 1) {
+                ctx.beginPath();
+                ctx.moveTo(xData[0], yData[0]);
+                for (var i = 1; i < xData.length; i++) {
+                    ctx.lineTo(xData[i], yData[i]);
+                }
+                ctx.stroke();
+                ctx.closePath();
             }
         }
 
