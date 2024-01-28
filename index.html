@@ -145,7 +145,8 @@
         }
 
         function clearCanvas() {
-            // Only clear the audio data, keeping the existing drawing
+            // Only clear the audio data and the main drawing canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             allAudioData.left = [];
             allAudioData.right = [];
         }
