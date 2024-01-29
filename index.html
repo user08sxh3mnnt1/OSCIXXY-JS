@@ -13,28 +13,34 @@
             height: 100vh;
             margin: 0;
             flex-direction: column;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
         }
 
         #header {
             text-align: center;
-            opacity: 0.7;
             margin-bottom: 20px;
         }
 
         #siteName {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: bold;
+            color: #ff4646; /* Red color accent */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         #username {
-            font-size: 18px;
+            font-size: 24px;
+            color: #ff4646; /* Red color accent */
         }
 
         #canvasContainer {
             position: relative;
             width: 300px;
             height: 300px;
+            margin-top: 20px;
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 10px; /* Rounded corners */
         }
 
         canvas {
@@ -42,6 +48,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            border-radius: 8px; /* Rounded corners */
         }
 
         #tracingCanvas {
@@ -50,11 +57,19 @@
             top: 0;
             left: 0;
             pointer-events: none;
-            z-index: -1; /* Set the tracing canvas to be behind the main canvas */
+            z-index: -1;
+            border-radius: 8px; /* Rounded corners */
         }
 
         button {
             margin-top: 15px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #ff4646; /* Red color accent */
+            color: #fff; /* White text color */
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; /* Rounded corners */
         }
 
         input[type="file"],
